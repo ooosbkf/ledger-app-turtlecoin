@@ -23,12 +23,12 @@ include $(BOLOS_SDK)/Makefile.defines
 #Monero /44'/128'
 #--appFlags 0x40
 APP_LOAD_PARAMS=  --path "2147483692/2147483776" --curve secp256k1 $(COMMON_LOAD_PARAMS)
-APPNAME = "Monero"
+APPNAME = "TurtleCoin"
 
 ifeq ($(TARGET_NAME),TARGET_BLUE)
-ICONNAME = images/icon_monero_blue.gif
+ICONNAME = images/icon_turtlecoin.gif
 else
-ICONNAME = images/icon_monero.gif
+ICONNAME = images/icon_turtlecoin.gif
 endif
 
 APPVERSION_M=1
