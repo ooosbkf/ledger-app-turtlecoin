@@ -151,7 +151,6 @@ The full menu layout is :
 |             \ *It will reset the device*
 |             Abort
 |             Test Network
-|             Stage Network
 |             Main Network
 |       Reset
 | About 
@@ -179,7 +178,7 @@ Settings
 Change Network
 ~~~~~~~~~~~~~~
 
-Change the network pairing of the application. Some version maybe locked to Test or Stage network.
+Change the network pairing of the application. Some version maybe locked to Test network.
 
 
 Reset

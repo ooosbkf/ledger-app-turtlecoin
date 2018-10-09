@@ -342,7 +342,6 @@ const ux_menu_entry_t ui_menu_network[] = {
   {NULL,   NULL,                   0,        NULL, "It will reset", "the device!", 0, 0},
   {NULL,   ui_menu_main_display,   0,                                      &C_badge_back, "Abort",         NULL,          61, 40},
   {NULL,   ui_menu_network_action, TESTNET,  NULL, "Test Network ",  NULL,          0, 0},
-  {NULL,   ui_menu_network_action, STAGENET, NULL, "Stage Network", NULL,          0, 0},
   {NULL,   ui_menu_network_action, MAINNET,  NULL, "Main Network",  NULL,          0, 0},
   UX_MENU_END
 };
@@ -354,12 +353,7 @@ const bagl_element_t* ui_menu_network_preprocessor(const ux_menu_entry_t* entry,
     G_monero_vstate.ux_menu[13] = '+';
     element->text = G_monero_vstate.ux_menu;
   }
-  if ((entry == &ui_menu_network[3]) && (element->component.userid==0x20) && (N_monero_pstate->network_id == STAGENET)) {
-    os_memmove(G_monero_vstate.ux_menu, "Stage Network ", 14);
-    G_monero_vstate.ux_menu[13] = '+';
-    element->text = G_monero_vstate.ux_menu;
-  }
-  if ((entry == &ui_menu_network[4]) && (element->component.userid==0x20) && (N_monero_pstate->network_id == MAINNET)) {
+  if ((entry == &ui_menu_network[3]) && (element->component.userid==0x20) && (N_monero_pstate->network_id == MAINNET)) {
     os_memmove(G_monero_vstate.ux_menu, "Main Network  ", 14);
     G_monero_vstate.ux_menu[13] = '+';
     element->text = G_monero_vstate.ux_menu;
