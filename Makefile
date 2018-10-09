@@ -20,9 +20,9 @@ $(error Environment variable BOLOS_SDK is not set)
 endif
 include $(BOLOS_SDK)/Makefile.defines
 
-#Monero /44'/128'
+#TurtleCoin /44'/1984'
 #--appFlags 0x40
-APP_LOAD_PARAMS=  --path "2147483692/2147483776" --curve secp256k1 $(COMMON_LOAD_PARAMS)
+APP_LOAD_PARAMS=  --path "2147483692/2147485632" --curve secp256k1 $(COMMON_LOAD_PARAMS)
 APPNAME = "TurtleCoin"
 
 ifeq ($(TARGET_NAME),TARGET_BLUE)
