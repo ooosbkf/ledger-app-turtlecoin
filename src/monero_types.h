@@ -31,7 +31,7 @@
 #define MONERO_EXT_CHALLENGE_LENTH               254
 
 /* --- ... --- */
-#define MAINNET_CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX             18
+#define MAINNET_CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX             3914525 // monero: 18
 #define MAINNET_CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX  19
 #define MAINNET_CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX          42
 
@@ -151,10 +151,10 @@ struct monero_v_state_s {
   /* ------------------------------------------ */
   union {
     struct {
-      /* menu 0: 95-chars + "<monero: >"  + null */
-      char            ux_menu[112];
-      // address to display: 95-chars + null
-      char            ux_address[96];
+      /* menu 0: 99-chars + "<TurtleCoin: >"  + null */
+      char            ux_menu[120];
+      // address to display: 99-chars + null
+      char            ux_address[100];
       // xmr to display: max pow(2,64) unit, aka 20-chars + '0' + dot + null
       char            ux_amount[23];
     };

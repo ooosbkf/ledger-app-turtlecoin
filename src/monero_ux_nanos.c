@@ -440,10 +440,10 @@ const bagl_element_t* ui_menu_main_preprocessor(const ux_menu_entry_t* entry, ba
   if (entry == &ui_menu_main[0]) {
     if(element->component.userid==0x20) {  
       os_memset(G_monero_vstate.ux_menu, 0, sizeof(G_monero_vstate.ux_menu));
-      os_memmove(G_monero_vstate.ux_menu, "< Monero: ", 10);
-      monero_base58_public_key(G_monero_vstate.ux_menu+10, G_monero_vstate.A,G_monero_vstate.B, 0);
-      G_monero_vstate.ux_menu[10+95+0] = ' ';
-      G_monero_vstate.ux_menu[10+95+1] = '>';
+      os_memmove(G_monero_vstate.ux_menu, "< TurtleCoin: ", 14);
+      monero_base58_public_key(G_monero_vstate.ux_menu+14, G_monero_vstate.A,G_monero_vstate.B, 0);
+      G_monero_vstate.ux_menu[14+99+0] = ' ';
+      G_monero_vstate.ux_menu[14+99+1] = '>';
       
       element->component.stroke = 10; // 1 second stop in each way
       element->component.icon_id = 48; // roundtrip speed in pixel/s
