@@ -176,6 +176,7 @@ int monero_apdu_put_key() {
   unsigned char pub[32];
   unsigned char sec[32];
 
+// trtl: check if need change 95 to 99
   if (G_monero_vstate.io_length != (32*2 + 32*2 + 95)) {
     THROW(SW_WRONG_LENGTH);
     return SW_WRONG_LENGTH;
@@ -227,7 +228,7 @@ int monero_apdu_get_key() {
     monero_io_insert(G_monero_vstate.B, 32);
     //public base address
     monero_base58_public_key((char*)G_monero_vstate.io_buffer+G_monero_vstate.io_offset, G_monero_vstate.A, G_monero_vstate.B, 0);
-    monero_io_inserted(95);
+    monero_io_inserted(95); // trtl:  check if need change 95 to 99
     break;
 
   //get private
@@ -298,7 +299,7 @@ int monero_apdu_verify_key() {
   monero_io_discard(1);
   monero_io_insert_u32(verified);
   monero_base58_public_key((char*)G_monero_vstate.io_buffer+G_monero_vstate.io_offset, G_monero_vstate.A,G_monero_vstate.B, 0);
-  monero_io_inserted(95);
+  monero_io_inserted(95); // trtl:  check if need change 95 to 99
   return SW_OK;
 }
 
